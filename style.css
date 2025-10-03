@@ -2,31 +2,30 @@
    Mobile Controls
 =================== */
 #mobileControls {
-  position: relative;        /* sits just below the canvas */
+  position: relative;         /* stays inside gameContainer */
   width: 100%;
-  margin-top: 10px;          /* space below canvas */
+  margin-top: 10px;
   display: flex;
-  justify-content: space-between; /* left group vs fire button */
+  justify-content: space-between;
   align-items: center;
   z-index: 10;
+  padding: 0 15px;
 }
 
-/* Left + Right grouped together */
+/* Left group (← →) */
 #leftControls {
   display: flex;
-  gap: 12px;
-  margin-left: 20px;
+  gap: 15px;
 }
 
-/* Fire button alone on the right */
-#rightControls {
-  margin-right: 20px;
-}
+/* Right (Fire) */
+#rightControls {}
 
+/* Buttons style */
 .mobile-btn {
-  font-size: 2.6em;
-  padding: 28px 36px;
-  border-radius: 20px;
+  font-size: 2em;
+  padding: 16px 24px;
+  border-radius: 18px;
   border: none;
   background: #222;
   color: #fff;
@@ -40,6 +39,31 @@
   opacity: 1;
   transform: scale(1.1);
 }
+
+/* ✅ Mobile view: stick inside frame bottom */
+@media (max-width: 768px) {
+  #mobileControls {
+    position: absolute;        /* relative to gameContainer */
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+  }
+
+  #leftControls {
+    margin-left: 10px;
+  }
+
+  #rightControls {
+    margin-right: 10px;
+  }
+
+  .mobile-btn {
+    font-size: 3em;           /* larger for touch */
+    padding: 26px 36px;
+  }
+}
+
 
 
 body {
