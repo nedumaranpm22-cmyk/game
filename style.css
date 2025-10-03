@@ -1,16 +1,31 @@
-/* Mobile Controls */
+/* ===================
+   Mobile Controls
+=================== */
 #mobileControls {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;        /* sits just below the canvas */
+  width: 100%;
+  margin-top: 10px;          /* space below canvas */
   display: flex;
-  gap: 32px;
+  justify-content: space-between; /* left group vs fire button */
+  align-items: center;
   z-index: 10;
 }
+
+/* Left + Right grouped together */
+#leftControls {
+  display: flex;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+/* Fire button alone on the right */
+#rightControls {
+  margin-right: 20px;
+}
+
 .mobile-btn {
-  font-size: 2.2em;
-  padding: 18px 28px;
+  font-size: 2em;
+  padding: 16px 26px;
   border-radius: 16px;
   border: none;
   background: #222;
@@ -19,10 +34,13 @@
   opacity: 0.85;
   transition: background 0.2s;
 }
+
 .mobile-btn:active {
   background: #444;
   opacity: 1;
 }
+
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -92,11 +110,19 @@ canvas {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px 20px;
+  padding: 12px 28px;
   font-size: 20px;
+  font-weight: bold;
   background: crimson;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  box-shadow: 0 2px 8px #000a;
+  z-index: 20; /* ensure it's clickable over canvas */
 }
+
+#restartBtn:hover {
+  background: darkred;
+}
+

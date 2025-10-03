@@ -20,22 +20,28 @@
 
     <!-- HUD -->
     <div id="hud">
-      <span>Level: <b id="levelNum">1</b></span>
-      <span>Score: <b id="scoreNum">0</b></span>
-      <span>Health: <b id="healthNum">3</b></span>
+      <span>Level: <span id="levelNum">1</span></span>
+      <span>Score: <span id="scoreNum">0</span></span>
+      <span>HP: <span id="healthNum">3</span></span>
     </div>
 
-    <!-- Center message -->
+    <!-- Center message + restart button inside the game frame -->
     <div id="centerMessage" class="hidden"></div>
     <button id="restartBtn" class="hidden">Try again</button>
+  </div>
+
 
     <!-- Mobile Controls -->
-    <div id="mobileControls">
+  <div id="mobileControls" class="hidden">
+    <div id="leftControls">
       <button id="btnLeft" class="mobile-btn">⟵</button>
-      <button id="btnShoot" class="mobile-btn">⦿</button>
       <button id="btnRight" class="mobile-btn">⟶</button>
     </div>
+    <div id="rightControls">
+      <button id="btnShoot" class="mobile-btn">🔥</button>
+    </div>
   </div>
+
 
   <script src="script.js"></script>
 </body>
