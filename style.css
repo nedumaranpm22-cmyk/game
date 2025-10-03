@@ -1,3 +1,28 @@
+/* Mobile Controls */
+#mobileControls {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 32px;
+  z-index: 10;
+}
+.mobile-btn {
+  font-size: 2.2em;
+  padding: 18px 28px;
+  border-radius: 16px;
+  border: none;
+  background: #222;
+  color: #fff;
+  box-shadow: 0 2px 8px #000a;
+  opacity: 0.85;
+  transition: background 0.2s;
+}
+.mobile-btn:active {
+  background: #444;
+  opacity: 1;
+}
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;

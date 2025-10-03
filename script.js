@@ -1,3 +1,25 @@
+// Mobile Controls wiring
+const btnLeft = document.getElementById('btnLeft');
+const btnRight = document.getElementById('btnRight');
+const btnShoot = document.getElementById('btnShoot');
+
+if (btnLeft && btnRight && btnShoot) {
+  // Touch/Mouse Down: set key pressed
+  btnLeft.addEventListener('touchstart', () => { game.keys['ArrowLeft'] = true; });
+  btnLeft.addEventListener('mousedown', () => { game.keys['ArrowLeft'] = true; });
+  btnRight.addEventListener('touchstart', () => { game.keys['ArrowRight'] = true; });
+  btnRight.addEventListener('mousedown', () => { game.keys['ArrowRight'] = true; });
+  btnShoot.addEventListener('touchstart', () => { game.keys[' '] = true; });
+  btnShoot.addEventListener('mousedown', () => { game.keys[' '] = true; });
+
+  // Touch/Mouse End: unset key
+  btnLeft.addEventListener('touchend', () => { game.keys['ArrowLeft'] = false; });
+  btnLeft.addEventListener('mouseup', () => { game.keys['ArrowLeft'] = false; });
+  btnRight.addEventListener('touchend', () => { game.keys['ArrowRight'] = false; });
+  btnRight.addEventListener('mouseup', () => { game.keys['ArrowRight'] = false; });
+  btnShoot.addEventListener('touchend', () => { game.keys[' '] = false; });
+  btnShoot.addEventListener('mouseup', () => { game.keys[' '] = false; });
+}
 /* Debugged & cleaned script.js for TECHNOTHIRST
    Levels:
    1 -> drones (kill X to advance)
